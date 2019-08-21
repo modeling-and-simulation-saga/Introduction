@@ -23,18 +23,19 @@ public class StudentMainWithList {
         };
         int records[] = {90, 70, 88, 95, 100, 60, 45, 80, 95, 55};
         //クラスインスタンスのリスト
-        List<Student> students=Collections.synchronizedList(new ArrayList<>());
+        List<Student> studentList
+                = Collections.synchronizedList(new ArrayList<>());
         //配列に登録、及び成績登録
         for (int i = 0; i < names.length; i++) {
-            Student s =new Student(names[i], i);
+            Student s = new Student(names[i], i);
             s.setRecord(records[i]);
-            students.add(s);
+            studentList.add(s);
         }
         //整列の実行
-        sort(students);
+        sort(studentList);
         //一覧を印刷
-        for (int i = 0; i < students.size(); i++) {
-            Student s = students.get(i);
+        for (int i = 0; i < studentList.size(); i++) {
+            Student s = studentList.get(i);
             System.out.println(s.getName() + "(" + s.getStudentID() + "):"
                     + s.getRecord());
         }
