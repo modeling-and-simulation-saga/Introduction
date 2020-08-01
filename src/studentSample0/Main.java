@@ -14,7 +14,8 @@ public class Main {
         //ここでは、クラスインスタンスの配列を生成
         Student students[] = {new Student("Aoyama", 1),
                               new Student("Asou", 2)};
-        for (int i = 0; i < students.length; i++) {
-            System.out.println(students[i].name); }
+        for (Student student : students) {
+            System.out.println(student.name);
+        }
     }
 }
