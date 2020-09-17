@@ -12,9 +12,9 @@ public class Main {
     public static void main(String[] args) {
         // Studentクラスインスタンスの生成
         //ここでは、クラスインスタンスの配列を生成
-        Student students[] = {new Student("Aoyama", 1),
+        Student[] studentArray = {new Student("Aoyama", 1),
                               new Student("Asou", 2)};
-        for (Student student : students) {
+        for (Student student : studentArray) {
             System.out.println(student.name);
         }
     }
